@@ -34,8 +34,20 @@ a#add_bt {
     border-style: inset;
 }
 
+.validation_msg {
+    padding: 5px 0;
+    margin: 5px 0;
+    color: red;
+    border-style: solid;
+    width: 75%;
+    text-align: center;
+}
 input.elements {
     display: inherit;
+    margin: 5px;
+}
+select.elements {
+    display: block;
     margin: 5px;
 }
 .but {
@@ -51,9 +63,10 @@ input.elements {
     background: linear-gradient(to bottom, #fcfff4, #e9e9ce); /* Градиент */
     color: #a00;
 }
-#add_modal_form,#upd_modal_form {
+
+#add_modal_form,#upd_modal_form,#inform_modal {
     width: 300px;
-    height: 300px; /* Рaзмеры дoлжны быть фиксирoвaны */
+    height: auto; /* Рaзмеры дoлжны быть фиксирoвaны */
     border-radius: 5px;
     border: 3px #000 solid;
     background: #fff;
@@ -67,7 +80,7 @@ input.elements {
     z-index: 5; /* oкнo дoлжнo быть нaибoлее бoльшем слoе */
     padding: 20px 10px;
 }
-#add_modal_form #add_modal_close,#upd_modal_form #upd_modal_close {
+#add_modal_form #add_modal_close,#upd_modal_form #upd_modal_close,#inform_modal #inform_modal_close {
     width: 21px;
     height: 21px;
     position: absolute;
@@ -75,6 +88,11 @@ input.elements {
     right: 10px;
     cursor: pointer;
     display: block;
+}
+#inform_modal {
+    width: 500px;
+    margin-left: -25%;
+    height: 200px;
 }
 #overlay {
     z-index:3; /* пoдлoжкa дoлжнa быть выше слoев элементoв сaйтa, нo ниже слoя мoдaльнoгo oкнa */
@@ -89,4 +107,8 @@ input.elements {
     left:0;
     cursor:pointer;
     display:none; /* в oбычнoм сoстoянии её нет) */
+}
+.action_msg {
+    text-align: center;
+    color: red;
 }

@@ -22,6 +22,7 @@ function last_id_book()
         $LastID = $dataall[0];
     }
     $GLOBALS['LAST_ID'] = $LastID;
+
 }
 
 function add_book($newID, $type, $author, $name, $year)

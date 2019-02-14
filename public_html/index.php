@@ -21,11 +21,11 @@ require($_SERVER['DOCUMENT_ROOT'] . '/components/result.php');
             ?>
             <div class="element">
                 <div class="Avatar"></div>
-                <div class="ID">Номер книги №: <? echo $book["ID"]; ?></div>
-                <div class="Name">Наименование книги: <? echo $book["name"]; ?></div>
-                <div class="Type">Жанр книги: <? echo $book["type"]; ?></div>
-                <div class="Author">Автор: <? echo $book["author"]; ?></div>
-                <div class="Year">Год книги: <? echo $book["year"]; ?></div>
+                <div class="ID">Номер книги №: <span><? echo $book["ID"]; ?></span></div>
+                <div class="Name">Наименование книги: <span><? echo $book["name"]; ?></span></div>
+                <div class="Type">Жанр книги: <span><? echo $book["type"]; ?></span></div>
+                <div class="Author">Автор:<span> <? echo $book["author"]; ?></span></div>
+                <div class="Year">Год книги:<span> <? echo $book["year"]; ?></span></div>
                 <a href="#" class="but" id="upd_bt" data-upd="<?=$book["ID"]?>">Редактировать книгу</a>
                 <a href="#" class="but" id="del_bt" data-del="<?=$book["ID"]?>">Удалить книгу</a>
             </div>
@@ -49,8 +49,7 @@ require($_SERVER['DOCUMENT_ROOT'] . '/components/result.php');
                 <option>Поэзия </option>
                 <option>Русская классика </option>
             </select>
-<!--            <input id="type" class="elements" type="text">-->
-<!--            <span>Год книги: </span>-->
+            <span>Год книги: </span>
             <input id="year" class="elements" type="text">
             <a id="add_book_bt" class="but"> Добавить книгу </a>
         </div>
@@ -66,12 +65,23 @@ require($_SERVER['DOCUMENT_ROOT'] . '/components/result.php');
             <span>Автор книги:</span>
             <input id="author" class="elements" type="text">
             <span>Жанр книги:</span>
-            <input id="type" class="elements" type="text">
+            <select id="type" class="elements"  >
+                <option>Детектив</option>
+                <option>Фантастика </option>
+                <option>Любовные романы</option>
+                <option>Бизнес </option>
+                <option>Поэзия </option>
+                <option>Русская классика </option>
+            </select>
             <span>Год книги: </span>
             <input id="year" class="elements" type="text">
             <a id="update_book_bt" class="but" data-upd="">Редактировать книгу</a>
         </div>
     </form>
+</div>
+<div id="inform_modal">
+    <span id="inform_modal_close">X</span>
+    <div class="text_modal"></div>
 </div>
 <div id="overlay"></div>
 </body>
