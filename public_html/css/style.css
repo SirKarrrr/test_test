@@ -57,6 +57,7 @@ select.elements {
     text-decoration: none; /* Убираем подчёркивание */
     color: #000; /* Цвет текста */
     margin: 5px;
+    cursor: pointer;
 }
 .but:hover {
     box-shadow: 0 0 5px rgba(0,0,0,0.3); /* Тень */
@@ -80,6 +81,7 @@ select.elements {
     z-index: 5; /* oкнo дoлжнo быть нaибoлее бoльшем слoе */
     padding: 20px 10px;
 }
+
 #add_modal_form #add_modal_close,#upd_modal_form #upd_modal_close,#inform_modal #inform_modal_close {
     width: 21px;
     height: 21px;
